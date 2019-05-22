@@ -1,4 +1,9 @@
 sudo: required
 language: node_js
 node_js:
-  - "8.9.1"
+  - "lts/argon"
+  - "lts/boron"
+  - "lts/carbon"
+  - "lts/dubnium"
+  - "stable"
+
