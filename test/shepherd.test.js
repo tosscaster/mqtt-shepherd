@@ -396,7 +396,7 @@ describe('Top Level of Tests', function () {
       it('should announce properly', function (done) {
         var annCb = sinon.spy()
         shepherd.announce('hello').then(annCb).done(function () {
-          expect(annCb).to.have.been.called(1)
+          expect(annCb).should.have.been.calledOnce // eslint-disable-line
           done()
         })
       })
@@ -408,7 +408,7 @@ describe('Top Level of Tests', function () {
         var readReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.readReq('0/1/x1').then(readReqCb).done(function () {
-          expect(readReqCb).to.have.been.called(1)
+          expect(readReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(readReqCb).to.be.calledWith({ status: 205, data: 'world' })
           done()
         })
@@ -430,7 +430,7 @@ describe('Top Level of Tests', function () {
         var readReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.readReq('0/1/x1').then(readReqCb).done(function () {
-          expect(readReqCb).to.have.been.called(1)
+          expect(readReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(readReqCb).to.be.calledWith({ status: 205, data: 'world' })
           done()
         })
@@ -452,7 +452,7 @@ describe('Top Level of Tests', function () {
         var readReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.readReq('0/1').then(readReqCb).done(function () {
-          expect(readReqCb).to.have.been.called(1)
+          expect(readReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(readReqCb).to.be.calledWith({ status: 205, data: { x1: 'hi world', x11: 'yap' } })
           done()
         })
@@ -473,7 +473,7 @@ describe('Top Level of Tests', function () {
         var readReqCb = sinon.spy() // (clientId, reqObj, callback)
         //  { oid: 0, data: { 1: { x1: 'hi' }, 2: { x2: 'hello' }, 3: { x3: 'hey' } }},
         qnode.readReq('0').then(readReqCb).done(function () {
-          expect(readReqCb).to.have.been.called(1)
+          expect(readReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(readReqCb).to.be.calledWith({ status: 205,
             data: {
               1: { x1: 'bro' },
@@ -505,7 +505,7 @@ describe('Top Level of Tests', function () {
         var writeReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.writeReq('0/1/x1', 'new_x1_value').then(writeReqCb).done(function () {
-          expect(writeReqCb).to.have.been.called(1)
+          expect(writeReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(writeReqCb).to.be.calledWith({ status: 204, data: 'new_x1_value' })
 
           setTimeout(function () {
@@ -544,7 +544,7 @@ describe('Top Level of Tests', function () {
 
         // x60 has no effect
         qnode.writeReq('0/1', { x1: 'new_x1_value2', x60: 3 }).then(writeReqCb).done(function () {
-          expect(writeReqCb).to.have.been.called(1)
+          expect(writeReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(writeReqCb).to.be.calledWith({ status: 204, data: { x1: 'new_x1_value2' } })
 
           setTimeout(function () {
@@ -582,7 +582,7 @@ describe('Top Level of Tests', function () {
         var writeAttrsReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.writeAttrsReq('0/1/x1', { pmin: 11, pmax: 66, gt: 100, lt: 10, stp: 99 }).then(writeAttrsReqCb).done(function () {
-          expect(writeAttrsReqCb).to.have.been.called(1)
+          expect(writeAttrsReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(writeAttrsReqCb).to.be.calledWith({ status: 200 })
           done()
         })
@@ -604,7 +604,7 @@ describe('Top Level of Tests', function () {
         var writeAttrsReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.writeAttrsReq('0/1', { pmin: 11, pmax: 66, gt: 100, lt: 10, stp: 99 }).then(writeAttrsReqCb).done(function () {
-          expect(writeAttrsReqCb).to.have.been.called(1)
+          expect(writeAttrsReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(writeAttrsReqCb).to.be.calledWith({ status: 200 })
           done()
         })
@@ -627,7 +627,7 @@ describe('Top Level of Tests', function () {
         var execReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.executeReq('0/1/x1', []).then(execReqCb).done(function () {
-          expect(execReqCb).to.have.been.called(1)
+          expect(execReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(execReqCb).to.be.calledWith({ status: 204, data: 'foo_result' })
           done()
         })
@@ -651,7 +651,7 @@ describe('Top Level of Tests', function () {
         var obsvReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.observeReq('0/1/x1').then(obsvReqCb).done(function () {
-          expect(obsvReqCb).to.have.been.called(1)
+          expect(obsvReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(obsvReqCb).to.be.calledWith({ status: 205 })
           done()
         })
@@ -674,7 +674,7 @@ describe('Top Level of Tests', function () {
         var dscvReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.discoverReq('0/1/x1').then(dscvReqCb).done(function () {
-          expect(dscvReqCb).to.have.been.called(1)
+          expect(dscvReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(dscvReqCb).to.be.calledWith({ status: 205, data: { pmin: 2, pmax: 10 } })
           done()
         })
@@ -696,7 +696,7 @@ describe('Top Level of Tests', function () {
         var dscvReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.discoverReq('0/1').then(dscvReqCb).done(function () {
-          expect(dscvReqCb).to.have.been.called(1)
+          expect(dscvReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(dscvReqCb).to.be.calledWith({ status: 205, data: { pmin: 21, pmax: 110 } })
           done()
         })
@@ -717,7 +717,7 @@ describe('Top Level of Tests', function () {
         var dscvReqCb = sinon.spy() // (clientId, reqObj, callback)
 
         qnode.discoverReq('0').then(dscvReqCb).done(function () {
-          expect(dscvReqCb).to.have.been.called(1)
+          expect(dscvReqCb).should.have.been.calledOnce // eslint-disable-line
           expect(dscvReqCb).to.be.calledWith({ status: 205,
             data: {
               pmin: 2,
