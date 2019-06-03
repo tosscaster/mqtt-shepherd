@@ -21,18 +21,18 @@
   "dependencies": {
     "areq": "^0.2.0",
     "busyman": "^0.3.0",
-    "debug": "^2.2.0",
+    "debug": "^4.1.1",
     "lwmqn-util": "^0.5.1",
     "mosca": "^2.0.2",
-    "mqtt": "^1.5.0",
+    "mqtt": "^3.0.0",
     "nedb": "^1.8.0",
-    "network": "^0.2.1",
+    "network": "^0.4.1",
     "q": "^1.4.1",
     "smartobject": "^1.4.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^4.1.0",
+    "mocha": "^6.1.4",
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0",
     "snazzy": "^8.0.0",
