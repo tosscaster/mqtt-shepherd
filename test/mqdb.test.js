@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-const _ = require('busyman')
+const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
 const Mqdb = require('../lib/components/mqdb')
