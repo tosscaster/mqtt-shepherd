@@ -96,16 +96,16 @@ describe('Top Level of Tests', () => {
         intf: '', ip: '', mac: '', routerIp: ''
       })
       expect(shepherd._channels).to.be.deep.equal({
-        'register/#': 0,
-        'deregister/#': 0,
-        'notify/#': 1,
-        'update/#': 1,
-        'response/#': 1,
-        'ping/#': 0,
-        'schedule/#': 0,
-        'lwt/#': 0,
-        'request/#': 0,
-        'announce/#': 0
+        'register/#': {qos: 0},
+        'deregister/#': {qos: 0},
+        'schedule/#': {qos: 0},
+        'notify/#': {qos: 1},
+        'update/#': {qos: 1},
+        'response/#': {qos: 1},
+        'ping/#': {qos: 0},
+        'lwt/#': {qos: 0},
+        'request/#': {qos: 0},
+        'announce/#': {qos: 0}
       })
       expect(shepherd._areq).to.be.an('object')
 
