@@ -22,19 +22,19 @@
   "dependencies": {
     "aedes": "^0.38.1",
     "areq": "^0.2.0",
-    "debug": "^2.2.0",
+    "debug": "^4.1.1",
     "lodash": "^4.17.11",
     "lwmqn-util": "^0.5.1",
-    "mqtt": "^1.5.0",
+    "mqtt": "^3.0.0",
     "nedb": "^1.8.0",
-    "network": "^0.2.1",
-    "q": "^1.4.1",
-    "smartobject": "^1.4.2"
+    "network": "^0.4.1",
+    "q": "^1.5.1",
+    "smartobject": "^1.5.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "coveralls": "^3.0.3",
-    "mocha": "^4.1.0",
+    "coveralls": "^3.0.4",
+    "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0",
