@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-const _ = require('lodash')
+const _ = require('busyman')
 const chai = require('chai')
 const debug = require('debug')
 

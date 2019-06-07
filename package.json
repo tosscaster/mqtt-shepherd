@@ -22,8 +22,8 @@
   "dependencies": {
     "aedes": "^0.38.1",
     "areq": "^0.2.0",
+    "busyman": "^0.3.0",
     "debug": "^4.1.1",
-    "lodash": "^4.17.11",
     "lwmqn-util": "^0.5.1",
     "mqtt": "^3.0.0",
     "nedb": "^1.8.0",
