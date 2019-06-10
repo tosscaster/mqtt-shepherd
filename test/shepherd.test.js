@@ -109,7 +109,6 @@ describe('Top Level of Tests', () => {
       })
       expect(shepherd._areq).to.be.an('object')
 
-      expect(shepherd.mServer).to.be.equal(null);
       expect(shepherd.mBroker).to.be.equal(null)
       expect(shepherd.mClient).to.be.equal(null)
 
