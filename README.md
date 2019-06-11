@@ -30,7 +30,7 @@ Lightweight MQTT machine network ([**LWMQN**](http://lwmqn.github.io)) is an ope
 
 ### Features
 
-* Communication based on MQTT protocol and [Mosca](https://github.com/mcollina/mosca/wiki) broker.
+* Communication based on MQTT protocol and [aedes](https://github.com/mcollina/aedes) broker.
 * Embedded persistence ([NeDB](https://github.com/louischatriot/nedb)) and auto-reloads Client Devices at boot-up.
 * Build your IoT network with or without cloud services.
 * LWM2M-like interfaces for Client/Server interaction.
