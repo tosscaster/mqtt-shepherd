@@ -6,8 +6,9 @@
   "scripts": {
     "lint": "standard --env mocha | snazzy",
     "lint-fix": "standard --env mocha --fix | snazzy",
-    "test": "nyc mocha -u bdd --reporter spec --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "nyc mocha -u bdd --reporter spec --exit test/**",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "html-coverage": "npx nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
